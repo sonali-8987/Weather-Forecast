@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+		
+	<div class="container">
+		<div class="weather-side">
+		  <div class="weather-gradient"></div>
+		  <div class="date-container">
+			<h2 class="date-dayname">TODAY</h2><span class="date-day"><%= dateval %></span><i class="location-icon" data-feather="map-pin"></i><span class="location"><%=cityname%></span>
+		  </div>
+		  
+		  <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+			<span><img  src = "<%= image %>"></span>
+			<h1 class="weather-temp"><%= citytemp %>°C</h1>
+			<h3 class="weather-desc"><%= weatherdesc %></h3>
+		  </div>
+		</div>
+		<div class="info-side">
+		  <div class="today-info-container">
+			<div class="today-info">
+			  <div class="precipitation"> <span class="title">FEELS LIKE</span><span class="value"><%= feel %>°C</span>
+				<div class="clear"></div>
+			  </div>
+			  <div class="humidity"> <span class="title">HUMIDITY</span><span class="value"><%= humidity %>%</span>
+				<div class="clear"></div>
+			  </div>
+			  <div class="wind"> <span class="title">WIND</span><span class="value"><%= wind %>km/h</span>
+				<div class="clear"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="week-container">
+			<ul class="week-list">
+			  <li class="active"><i class="day-icon" data-feather="sun"></i><span class="day-name"><%= first %></span><span class="day-temp"> <%= citytemp1 %>°C</span><span><img src= "<%= img1 %>"></span></li>
+			  <li><i class="day-icon" data-feather="cloud"></i><span class="day-name"><%= second %></span><span class="day-temp"> <%= citytemp2 %>°C</span><span><img src= "<%= img2 %>"></span></li>
+			  <li><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name"><%= third %></span><span class="day-temp"> <%= citytemp3 %>°C</span><span><img src= "<%= img3 %>"></span></li>
+			  <li><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name"><%= fourth %></span><span class="day-temp"> <%= citytemp4 %>°C</span><span><img src = "<%= img4 %>"></span></li>
+			  <div class="clear"></div>
+			</ul>
+		  </div>
+		  <form action="/" method="post">
+		  <div class="location-container">
+			<input  type = "text" name = "cityname" placeholder="Search for a city" autofocus autocomplete ="off">
+			
+			<button class="location-button" type="submit" name = "submit"> <i data-feather="map-pin"></i><span>Change location</span></button>
+			
+		  </div></form>
+		</div>
+	  </div>
+</body>
+</html>
+
+				
+ 
